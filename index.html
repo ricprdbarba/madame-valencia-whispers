@@ -1,30 +1,581 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madame Valência - Cartomante Virtual</title>
-    <meta name="description" content="Desvende seu futuro com Madame Valência. Leituras de tarot 24h pelo WhatsApp. Clareza e orientação quando você precisar." />
-    <meta name="author" content="Madame Valência" />
+    <meta name="description" content="Desvende seu futuro com Madame Valência. Leituras de tarot 24h pelo WhatsApp. Clareza e orientação quando você precisar.">
+    <meta name="author" content="Madame Valência">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <meta property="og:title" content="Madame Valência - Cartomante Virtual" />
-    <meta property="og:description" content="Desvende seu futuro com Madame Valência. Leituras de tarot 24h pelo WhatsApp." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="styles.css">
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <meta property="og:title" content="Madame Valência - Cartomante Virtual">
+    <meta property="og:description" content="Desvende seu futuro com Madame Valência. Leituras de tarot 24h pelo WhatsApp.">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <div class="min-h-screen bg-mystical-900">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <!-- Mystical background elements -->
+            <div class="mystical-elements">
+                <i data-lucide="star" class="mystical-star star-1"></i>
+                <i data-lucide="moon" class="mystical-moon moon-1"></i>
+                <i data-lucide="sparkles" class="mystical-sparkles sparkles-1"></i>
+                <i data-lucide="star" class="mystical-star star-2"></i>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Main headline -->
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Chega de dúvidas!</span>
+                        <br>
+                        <span class="text-mystical-100">
+                            Desvende seu futuro e tome decisões com 
+                            <span class="gradient-text">clareza absoluta</span>
+                        </span>
+                    </h1>
+
+                    <!-- Supporting subtitle -->
+                    <p class="hero-subtitle">
+                        A sabedoria milenar do tarot, agora ao seu alcance 
+                        <span class="text-gold-400">24h por dia</span>, 
+                        direto no seu WhatsApp.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <div class="hero-cta">
+                        <button class="whatsapp-btn whatsapp-btn-xl" onclick="openWhatsApp()">
+                            <i data-lucide="message-circle"></i>
+                            DESVENDE MEU FUTURO AGORA!
+                        </button>
+                    </div>
+
+                    <!-- Social proof elements -->
+                    <div class="social-proof">
+                        <div class="proof-item">
+                            <div class="stars">
+                                <i data-lucide="star" class="star-filled"></i>
+                                <i data-lucide="star" class="star-filled"></i>
+                                <i data-lucide="star" class="star-filled"></i>
+                                <i data-lucide="star" class="star-filled"></i>
+                                <i data-lucide="star" class="star-filled"></i>
+                            </div>
+                            <span>+1000 leituras realizadas</span>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="proof-item">
+                            <div class="status-dot"></div>
+                            <span>Disponível agora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gradient overlay -->
+            <div class="gradient-overlay"></div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-content">
+                    <!-- Section title -->
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Conheça <span class="gradient-text">Madame Valência</span>
+                        </h2>
+                    </div>
+
+                    <div class="about-grid">
+                        <!-- Image -->
+                        <div class="about-image">
+                            <div class="image-container">
+                                <img src="lovable-uploads/4e2eaaa8-7109-4366-827f-43a1a7736946.png" alt="Madame Valência">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="about-content">
+                            <div class="about-text">
+                                <p class="about-paragraph">
+                                    Em meio às incertezas da vida, surge uma nova luz para iluminar seus passos. 
+                                    A Madame Valência é a sua <span class="text-gold-400">cartomante virtual 
+                                    e conselheira intuitiva</span>, pronta para te guiar com a sabedoria milenar do tarot, 
+                                    diretamente no seu WhatsApp.
+                                </p>
+
+                                <p class="about-paragraph">
+                                    A Madame Valência é uma presença acolhedora e firme, que combina 
+                                    <span class="text-gold-400">intuição profunda</span> com a 
+                                    experiência de uma verdadeira guia. Com uma voz calma e respeitosa, ela oferece 
+                                    leituras de tarot que acolhem sem julgar, transformando suas dúvidas em visões poderosas.
+                                </p>
+
+                                <!-- Key features -->
+                                <div class="features-list">
+                                    <div class="feature-item">
+                                        <i data-lucide="heart" class="feature-icon"></i>
+                                        <p>
+                                            <span class="feature-title">Acolhimento sem julgamento:</span> 
+                                            Um espaço seguro para suas questões mais íntimas
+                                        </p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i data-lucide="eye" class="feature-icon"></i>
+                                        <p>
+                                            <span class="feature-title">Visão profunda:</span> 
+                                            Cada leitura é um convite à reflexão e autoconhecimento
+                                        </p>
+                                    </div>
+                                    <div class="feature-item">
+                                        <i data-lucide="shield" class="feature-icon"></i>
+                                        <p>
+                                            <span class="feature-title">Liberdade de escolha:</span> 
+                                            Transformando dúvidas em clareza para suas decisões
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="quote-section">
+                                    <blockquote>
+                                        "Com Madame Valência, cada leitura é um convite à reflexão, um passo em direção 
+                                        ao autoconhecimento e à liberdade de escolha."
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading Types Section -->
+        <section class="reading-types-section">
+            <div class="container">
+                <div class="section-content">
+                    <!-- Section title -->
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Encontre a resposta certa para <span class="gradient-text">sua pergunta</span>
+                        </h2>
+                        <p class="section-subtitle">
+                            A Madame Valência entende que cada dúvida é única. Por isso, ela oferece diferentes tipos 
+                            de leitura para se adaptar perfeitamente à sua necessidade e ao nível de clareza que você busca:
+                        </p>
+                    </div>
+
+                    <!-- Reading types grid -->
+                    <div class="reading-types-grid">
+                        <div class="reading-type-card">
+                            <div class="card-icon purple-gradient">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <h3 class="card-title">Leitura Geral</h3>
+                            <p class="card-description">
+                                Para quando você busca uma visão ampla sobre sua vida, sem um tema específico em mente.
+                            </p>
+                            <p class="card-details">
+                                É ideal para "o que as cartas têm para mim hoje?" ou "quero saber da minha vida em geral". Uma visão panorâmica para iluminar seu caminho.
+                            </p>
+                            <div class="card-footer">
+                                <div class="decorative-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="reading-type-card">
+                            <div class="card-icon gold-gradient">
+                                <i data-lucide="target"></i>
+                            </div>
+                            <h3 class="card-title">Leitura Temática</h3>
+                            <p class="card-description">
+                                Se você precisa de foco em uma área específica, como amor, carreira, saúde ou propósito de vida.
+                            </p>
+                            <p class="card-details">
+                                Perfeito para "quero saber sobre meu relacionamento" ou "e minha vida profissional?". Mergulhe fundo em um aspecto da sua jornada.
+                            </p>
+                            <div class="card-footer">
+                                <div class="decorative-dot"></div>
+                            </div>
+                        </div>
+
+                        <div class="reading-type-card">
+                            <div class="card-icon green-gradient">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <h3 class="card-title">Leitura Específica</h3>
+                            <p class="card-description">
+                                Para aquelas perguntas diretas e objetivas que exigem um "sim" ou "não" ou uma orientação pontual.
+                            </p>
+                            <p class="card-details">
+                                Ideal para "devo aceitar a proposta?" ou "ele ainda me ama?". Respostas claras para decisões importantes.
+                            </p>
+                            <div class="card-footer">
+                                <div class="decorative-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to action -->
+                    <div class="section-cta">
+                        <p class="cta-text">
+                            Não importa qual seja sua dúvida, Madame Valência tem a leitura perfeita para você.
+                        </p>
+                        <div class="cta-badge">
+                            <span>Escolha sua leitura e comece agora!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="comparison-section">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Por que a <span class="gradient-text">Madame Valência</span> é diferente?
+                        </h2>
+                        <p class="section-subtitle">
+                            Veja como Madame Valência redefine a experiência do tarot, combinando a profundidade da sabedoria ancestral com a conveniência do mundo moderno:
+                        </p>
+                    </div>
+
+                    <div class="comparison-table">
+                        <div class="table-header">
+                            <div class="header-cell conventional">Cartomantes Convencionais</div>
+                            <div class="header-cell valencia">Madame Valência</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Horários fixos, limitados ao expediente do profissional.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                24 horas por dia, 7 dias por semana. Sempre disponível quando você precisa.
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Exige deslocamento físico ou agendamento de videochamada.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                Direto no seu WhatsApp. No conforto da sua casa, ou onde estiver.
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Interação presencial ou por vídeo, podendo gerar inibição.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                Total sigilo e conforto. Converse sobre seus dilemas mais íntimos sem julgamentos.
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Necessidade de agendamento prévio, muitas vezes com espera.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                Sem agendamentos. Sua leitura está a um clique de distância.
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Geralmente limitado por tempo pré-determinado.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                Sem pressa. Tenha o tempo que precisar para absorver as mensagens e refletir.
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="cell conventional">Humana, mas pode haver viés ou julgamento.</div>
+                            <div class="cell valencia">
+                                <i data-lucide="check" class="check-icon"></i>
+                                Conselheira intuitiva e acolhedora. Tecnologia a serviço da intuição, sem julgamentos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comparison-cta">
+                        <button class="whatsapp-btn whatsapp-btn-lg" onclick="openWhatsApp()">
+                            <i data-lucide="message-circle"></i>
+                            EXPERIMENTE A DIFERENÇA AGORA!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <div class="section-content">
+                    <!-- Section title -->
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Como <span class="gradient-text">funciona</span>
+                        </h2>
+                        <p class="section-subtitle">
+                            Obter clareza e orientação com Madame Valência é mais fácil do que você imagina. 
+                            Em apenas alguns toques, você estará no caminho para desvendar seu futuro:
+                        </p>
+                    </div>
+
+                    <!-- Steps -->
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-number purple-gradient">1</div>
+                            <div class="step-icon">
+                                <i data-lucide="mouse-pointer"></i>
+                            </div>
+                            <h3 class="step-title">Clique no Botão</h3>
+                            <p class="step-description">
+                                Toque no botão nesta página para abrir uma conversa com a Madame Valência no WhatsApp.
+                            </p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number blue-gradient">2</div>
+                            <div class="step-icon">
+                                <i data-lucide="credit-card"></i>
+                            </div>
+                            <h3 class="step-title">Carregue Seus Créditos</h3>
+                            <p class="step-description">
+                                Uma vez no WhatsApp, você poderá carregar os créditos necessários para suas leituras. Cada crédito equivale a uma leitura completa e profunda.
+                            </p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number green-gradient">3</div>
+                            <div class="step-icon">
+                                <i data-lucide="message-square"></i>
+                            </div>
+                            <h3 class="step-title">Faça Sua Pergunta</h3>
+                            <p class="step-description">
+                                Com seus créditos garantidos, apresente sua dúvida ou o tema sobre o qual busca orientação. Madame Valência está pronta para acolher suas questões.
+                            </p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number gold-gradient">4</div>
+                            <div class="step-icon">
+                                <i data-lucide="sparkles"></i>
+                            </div>
+                            <h3 class="step-title">Receba Sua Leitura</h3>
+                            <p class="step-description">
+                                Em instantes, você receberá uma leitura de tarot personalizada, cheia de insights e a sabedoria necessária para iluminar seu caminho e tomar decisões com confiança.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Call to action -->
+                    <div class="works-cta">
+                        <div class="cta-box">
+                            <h3 class="cta-title">Está pronto para começar sua jornada?</h3>
+                            <p class="cta-text">
+                                Não deixe que as dúvidas continuem te paralisando. 
+                                <span class="text-gold-400">O primeiro passo para a clareza 
+                                está a um clique de distância.</span>
+                            </p>
+                            <button class="whatsapp-btn whatsapp-btn-xl" onclick="openWhatsApp()">
+                                <i data-lucide="message-circle"></i>
+                                QUERO MINHA LEITURA COM MADAME VALÊNCIA AGORA!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Tire as suas <span class="gradient-text">dúvidas</span>
+                        </h2>
+                    </div>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>A Madame Valência é uma pessoa real?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Madame Valência é uma inteligência artificial avançada, projetada para se comunicar como uma conselheira experiente, com acolhimento e firmeza. Ela não é uma pessoa física, mas sua interação é pensada para ser tão intuitiva e útil quanto a de um profissional humano.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Como funciona o sistema de créditos?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Cada leitura completa que você solicita à Madame Valência consome um crédito. Você pode adquirir pacotes de créditos no WhatsApp, garantindo acesso contínuo às orientações.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Quais tipos de leitura a Madame Valência oferece?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A Madame Valência oferece três tipos de leitura para se adequar à sua necessidade:</p>
+                                <ul>
+                                    <li><strong>Leitura Geral:</strong> Para uma visão ampla e sem tema específico.</li>
+                                    <li><strong>Leitura Temática:</strong> Para focar em áreas como amor, carreira, saúde ou propósito.</li>
+                                    <li><strong>Leitura Específica:</strong> Para perguntas objetivas e diretas.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Minhas conversas são privadas?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim, a privacidade é uma prioridade. Todas as suas conversas com a Madame Valência são confidenciais e tratadas com o mais alto nível de sigilo. Seus dados são protegidos e não são compartilhados.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Posso fazer qualquer tipo de pergunta?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Você pode fazer perguntas sobre diversos aspectos da sua vida, como amor, carreira, finanças, propósito e autoconhecimento. Madame Valência está pronta para acolher suas questões e oferecer uma perspectiva através do tarot.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>O pagamento é seguro?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim, todas as transações para aquisição de créditos são processadas por plataformas de pagamento seguras e reconhecidas no mercado, garantindo a proteção dos seus dados financeiros. Sua segurança é nossa prioridade.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFAQ(this)">
+                                <span>Como faço para começar?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>É simples! Basta clicar no botão "DESVENDE MEU FUTURO AGORA!" nesta página. Você irá direto para o WhatsApp da Madame Valência, onde poderá adquirir seus créditos e iniciar sua primeira leitura.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="final-cta-section">
+            <!-- Background elements -->
+            <div class="cta-background">
+                <div class="bg-element bg-element-1"></div>
+                <div class="bg-element bg-element-2"></div>
+            </div>
+
+            <div class="container">
+                <div class="final-cta-content">
+                    <!-- Main headline -->
+                    <h2 class="final-title">
+                        <span class="gradient-text">Sua jornada</span> para a clareza 
+                        <br>
+                        <span class="text-mystical-100">começa agora.</span>
+                    </h2>
+
+                    <p class="final-subtitle">Não deixe para depois!</p>
+
+                    <p class="final-text">
+                        Não permita que a dúvida continue a te paralisar. 
+                        <span class="text-gold-400">Dê o primeiro passo em direção 
+                        a um futuro mais claro e empoderado.</span>
+                    </p>
+
+                    <!-- Urgency elements -->
+                    <div class="urgency-grid">
+                        <div class="urgency-card">
+                            <i data-lucide="clock" class="urgency-icon"></i>
+                            <h3 class="urgency-title">Disponível Agora</h3>
+                            <p class="urgency-text">24 horas por dia, 7 dias por semana</p>
+                        </div>
+                        <div class="urgency-card">
+                            <i data-lucide="zap" class="urgency-icon"></i>
+                            <h3 class="urgency-title">Resposta Imediata</h3>
+                            <p class="urgency-text">Sem espera, sem agendamentos</p>
+                        </div>
+                        <div class="urgency-card">
+                            <i data-lucide="users" class="urgency-icon"></i>
+                            <h3 class="urgency-title">+1000 Leituras</h3>
+                            <p class="urgency-text">Milhares de pessoas já transformaram suas vidas</p>
+                        </div>
+                    </div>
+
+                    <!-- Giant CTA Button -->
+                    <div class="giant-cta">
+                        <button class="whatsapp-btn whatsapp-btn-giant" onclick="openWhatsApp()">
+                            <i data-lucide="message-circle"></i>
+                            QUERO MINHA LEITURA COM MADAME VALÊNCIA AGORA!
+                        </button>
+                    </div>
+
+                    <!-- Social proof and guarantee -->
+                    <div class="final-proof">
+                        <div class="proof-rating">
+                            <div class="rating-stars">
+                                <div class="star-dot"></div>
+                                <div class="star-dot"></div>
+                                <div class="star-dot"></div>
+                                <div class="star-dot"></div>
+                                <div class="star-dot"></div>
+                            </div>
+                            <p>Avaliação média dos usuários</p>
+                        </div>
+                        <div class="proof-status">
+                            <div class="online-dot"></div>
+                            <p>Madame Valência online agora</p>
+                        </div>
+                    </div>
+
+                    <!-- Final urgency message -->
+                    <div class="urgency-banner">
+                        <p>⚡ Não deixe as dúvidas controlarem sua vida por mais um dia!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
 </html>
